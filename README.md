@@ -51,9 +51,15 @@ ensure that the EC2 instance allows traffic through the neccersary ports (**20-2
 
 Once you have edited the ```docker-compose.yml``` file to point towards your specific configuration, run ```docker-compose up --build``` to run the code.
 
+<h1>Technologies Used</h1>
 
+The ETL pipeline is orchastrated using Airflow, an easy to use workflow scheduler that uses DAGS to run events. Airflow supports custom operaters which can be written in Python, making its operation very flexible and means pipelines can have tailor-made operators that adapt to business logic and the individual requirements of clients. 
 
+Pyspark was used as the processing framework used to join and clean the datasets in question, due to its ability to work with larger-than-memory datasets and its ability to run on a Hadoop cluster using YARN. Although the size of the data in this particular project is a lot less than what can fit in memory, it is a good demonstration of how a tool like Spark can be used to work with larger datasets which Pandas is not suitable to handle - plus its MySQL JDBC connectors mean that loading the data from the program to the DB is simple.
 
+Redis was utilised as a messaging-service of sorts to allow data to be accessed by all the stages in the ETL pipeline, providing intermediary storage that is overwritten every time a stage is complete. RabbitMQ or even Kafka was considered here, but the size of the data paired with the fact that setting up a Redis instance with docker requires around 1/3 of the code required for Kafka meant that utilising these tools in this project would have been a waste. 
+
+In terms of DB storage, MySQL was used as it is, in my opinion, the easiest database to work with that offers good functionality and little configuration out of the box to work in a setup like this. Postgres was also considered, but the volume of the data meant that once again this would have been wasted - despite Postgres' significantly fast read-write speeds. 
 
 
 
