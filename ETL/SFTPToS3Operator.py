@@ -31,7 +31,7 @@ class SFTPToS3Operator(BaseOperator):
 
     def execute(self, context):
         ssh = paramiko.SSHClient()
-        key = paramiko.RSAKey.from_private_key_file(sel.pkey)
+        key = paramiko.RSAKey.from_private_key_file(self.pkey)
         ssh.get_host_keys().add(self.ip, "ssh-rsa", key)
         ssh.load_system_host_keys()
         ssh.connect(self.ip, username = self.username, pkey = key)
