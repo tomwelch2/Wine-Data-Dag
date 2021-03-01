@@ -1,0 +1,25 @@
+version: "3"
+services:
+  redis:
+    image: redis
+    ports:
+      - 6379:6379
+  airflow:
+    image: puckel/docker-airflow
+    ports:
+      - 8080:8080
+    volumes:
+      - ./requirements.txt:/requirements.txt
+      - ./ETL:/usr/local/airflow/dags/ETL
+    depends_on:
+      - redis
+    environment:
+      - AWS_ACCESS_KEY_ID=*Access Key*
+      - AWS_SECRET_ACCESS_KEY=*Secret Key*
+      - AWS_DEFAULT_REGION=eu-west-2
+      - MYSQL_USER=*MySQL username for EC2 instance*
+      - MYSQL_PASSWORD=*MySQL Password*
+      - MYSQL_DB=*MySQL Database name*
+      - MYSQL_DB_TABLE=*MySQL Database table*
+      - MYSQL_HOST=*Hostname of MySQL instance (EC2 IP)*
+

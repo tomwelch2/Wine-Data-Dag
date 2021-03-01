@@ -1,0 +1,5 @@
+pyspark
+findspark
+boto3
+redis
+

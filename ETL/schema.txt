@@ -1,0 +1,1 @@
+country STRING, description STRING, points INTEGER, price INTEGER, province STRING, region_1 STRING, region_2 STRING, taster_name STRING, taster_tweet_handle STRING, title STRING, variety STRING, winery STRING
