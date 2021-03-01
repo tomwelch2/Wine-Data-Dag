@@ -37,6 +37,7 @@ is where all the environment variables (AWS Access Key, MySQL Password etc) can 
 changed to suit individual configurations. 
 
 <h1>Running the code</h1>
+
 An EC2 instance is required with a pre-configured MySQL server running with access allowed to all traffic (this can be done by changing the ```bind-address``` parameter in the file ```/etc/mysql/mysql.conf.d/mysqld.cnf``` to **0.0.0.0**). A FTP server is also required to allow for the SFTP transactions to take place, which can be done by running ```sudo apt-install vsftpd``` and editing the ```/etc/vsftpd.conf``` file by adding 
 
 ```
@@ -45,6 +46,7 @@ pasv_max_port=2048
 pasv_min_port=1024
 pasv_addres *EC2 Public IPv4*
 ```
+
 ensure that the EC2 instance allows traffic through the neccersary ports (**20-22**, **1024-2048** and **3306**) and that the inbound rules allow a connection from any IP address, which can be done both during and after creating of the EC2 server.
 
 
