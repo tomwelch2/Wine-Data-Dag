@@ -7,6 +7,7 @@ from an SFTP server set up on EC2, transforming/cleaning the data with PySpark a
 instance also hosted on EC2.
 
 <h1>Repository Structure</h1>
+
 ```
 ├── docker-compose.yml
 ├── ETL
