@@ -38,6 +38,7 @@ changed to suit individual configurations.
 
 <h1>Running the code</h1>
 An EC2 instance is required with a pre-configured MySQL server running with access allowed to all traffic (this can be done by changing the ```bind-address``` parameter in the file ```/etc/mysql/mysql.conf.d/mysqld.cnf``` to **0.0.0.0**). A FTP server is also required to allow for the SFTP transactions to take place, which can be done by running ```sudo apt-install vsftpd``` and editing the ```/etc/vsftpd.conf``` file by adding 
+
 ```
 pasv_enable=YES
 pasv_max_port=2048
