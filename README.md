@@ -59,7 +59,7 @@ Pyspark was used as the processing framework used to join and clean the datasets
 
 Redis was utilised as a messaging-service of sorts to allow data to be accessed by all the stages in the ETL pipeline, providing intermediary storage that is overwritten every time a stage is complete. RabbitMQ or even Kafka was considered here, but the size of the data paired with the fact that setting up a Redis instance with docker requires around 1/3 of the code required for Kafka meant that utilising these tools in this project would have been a waste. 
 
-In terms of DB storage, MySQL was used as it is, in my opinion, the easiest database to work with that offers good functionality and little configuration out of the box to work in a setup like this. Postgres was also considered, but the volume of the data meant that once again this would have been wasted - despite Postgres' significantly fast read-write speeds. 
+In terms of DB storage, MySQL was used as it is, in my opinion, the easiest database to work with that offers good functionality and little configuration out of the box to work in a setup like this. Postgres was also considered, but the volume of the data meant that once again this would have been wasted - despite Postgres' significantly fast write speeds. 
 
 
 
