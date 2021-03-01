@@ -30,12 +30,13 @@ instance also hosted on EC2.
     │   └── test.cpython-38.pyc
     └── test.py
 ```
+
 Above you can see the layout of the repository, containing a ```docker-compose.yml``` file, a ```requirements.txt``` 
 file and a folder with the ETL steps and the custom SFTPToS3 operator. The ```docker-compose.yml``` file
 is where all the environment variables (AWS Access Key, MySQL Password etc) can be found and will need to be 
 changed to suit individual configurations. 
 
-<h1>Running the code</h2>
+<h1>Running the code</h1>
 <br>
 An EC2 instance is required with a pre-configured MySQL server running with access allowed to all traffic (this can be done by changing the ```bind-address``` parameter in the file ```/etc/mysql/mysql.conf.d/mysqld.cnf``` to **0.0.0.0**). A FTP server is also required to allow for the SFTP transactions to take place, which can be done by running ```sudo apt-install vsftpd``` and editing the ```/etc/vsftpd.conf``` file by adding 
 ```
