@@ -1,6 +1,6 @@
 # Wine-Data-Dag
 
-![alt text](https://welpmagazine.com/wp-content/uploads/2020/11/image.jpg)
+![alt text](https://thecraftycask.com/wp-content/uploads/2018/07/crafty-cask-craft-wine-banner-e1543284316865.jpg)
 
 <h1>Wine-Data Airflow DAG</h2>
 <br>
