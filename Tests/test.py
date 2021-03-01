@@ -8,9 +8,8 @@ class TestDag(unittest.TestCase):
         self.dags = DagBag()
 
     def test_task_numbers(self):
-        task = self.dags.get_dag("SFTPOperatorTest")
-        self.assertEqual(len(task.tasks), 2)
-
+        task = self.dags.get_dag("wineDataDag")
+        self.assertEqual(len(task.tasks), 6)
 
 
 if __name__ == "__main__":
