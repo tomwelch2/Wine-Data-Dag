@@ -10,6 +10,7 @@ from pyspark.sql import SparkSession
 ACCESS_KEY = os.environ.get("AWS_ACCESS_KEY_ID")
 SECRET_KEY = os.environ.get("AWS_SECRET_ACCESS_KEY")
 REGION_NAME = os.environ.get("AWS_DEFAULT_REGION")
+BUCKET_NAME = os.environ.get("AWS_BUCKET_NAME")
 #Connecting to S3 ---
 
 S3 = boto3.client(
@@ -26,9 +27,9 @@ def pull_from_S3(filename: str, bucket: str):
     with open(filename, "wb") as f:
         S3.download_fileobj(bucket, filename, filename)
 
-wine_csv_1 = pull_from_S3(filename = "wine_csv_1.csv", bucket = "testingbucket1003")
-wine_csv_2 = pull_from_S3(filename = "wine_csv_2.csv", bucket = "testingbucket1003")
-wine_json = pull_from_S3(filename = "wine_json.json", bucket = "testingbucket1003")
+wine_csv_1 = pull_from_S3(filename = "wine_csv_1.csv", bucket = BUCKET_NAME)
+wine_csv_2 = pull_from_S3(filename = "wine_csv_2.csv", bucket = BUCKET_NAME)
+wine_json = pull_from_S3(filename = "wine_json.json", bucket = BUCKET_NAME)
 
 #reading data into dataframes ---
 
