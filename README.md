@@ -28,7 +28,6 @@ instance also hosted on EC2.
     │   └── test.cpython-38.pyc
     └── test.py
 ```
-<br>
 
 Above you can see the layout of the repository, containing a ```docker-compose.yml``` file, a ```requirements.txt``` 
 file and a folder with the ETL steps and the custom SFTPToS3 operator. The ```docker-compose.yml``` file
