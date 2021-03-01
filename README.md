@@ -1,5 +1,7 @@
 # Wine-Data-Dag
 
+![alt text](https://welpmagazine.com/wp-content/uploads/2020/11/image.jpg)
+
 <h1>Wine-Data Airflow DAG</h2>
 <br>
 Mini Big-Data project that uses Airflow, SFTP, MySQL, Redis and AWS to perform a simple ETL process involving moving files 
