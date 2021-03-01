@@ -49,7 +49,7 @@ pasv_addres *EC2 Public IPv4*
 
 ensure that the EC2 instance allows traffic through the neccersary ports (**20-22**, **1024-2048** and **3306**) and that the inbound rules allow a connection from any IP address, which can be done both during and after creating of the EC2 server. 
 
-Once you have edited the ```docker-compose.yml``` file to point towards your specific configuration, run ```docker-compose up --build``` to run the code.
+Once you have edited the ```docker-compose.yml``` file to point towards your specific configuration, run ```docker-compose up --build``` to run the code and visit ```0.0.0.0:8080``` in your browser to view the Airflow UI where to DAG can be triggered and monitored.
 
 <h1>Technologies Used</h1>
 
