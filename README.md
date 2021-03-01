@@ -2,7 +2,7 @@
 
 ![alt text](https://thecraftycask.com/wp-content/uploads/2018/07/crafty-cask-craft-wine-banner-e1543284316865.jpg)
 
-<h1>Wine-Data Airflow DAG</h2>
+<h1>Wine-Data Airflow DAG</h1>
 Mini Big-Data project that uses Airflow, SFTP, MySQL, Redis and AWS to perform a simple ETL process involving moving files 
 from an SFTP server set up on EC2, transforming/cleaning the data with PySpark and loading the finished product into a MySQL
 instance also hosted on EC2.
